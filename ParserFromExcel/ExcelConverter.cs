@@ -18,6 +18,8 @@ namespace ExcelParsingApp
             var excel = new XLWorkbook(filepath);
             var sheets = excel.Worksheets;
 
+            numberOfQuestion = 1;
+
             string themeBody=string.Empty;
 
             List<Question> questions = new List<Question>();
