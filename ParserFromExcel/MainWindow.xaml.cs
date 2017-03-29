@@ -47,7 +47,7 @@ namespace ParserFromExcel
             OpenFileDialog openDialog = new OpenFileDialog();
             openDialog.Multiselect = true;
             openDialog.Filter = "Excel Files (*.XLS;*.XLSX)|*.XLS;*.XLSX";
-            string s = string.Empty;
+            
             if (openDialog.ShowDialog() == true)
             {
                 AddMessageToLog("Convertation is started...");
@@ -58,7 +58,7 @@ namespace ParserFromExcel
 
         private void AddMessageToLog(string v)
         {
-            MainLog.AppendText($"{DateTime.Now.ToShortTimeString()}: {v}");
+            MainLog.AppendText($"{DateTime.Now.ToShortTimeString()}: {v}\n");
         }
 
         private async Task ConvertDataFromExcel(IEnumerable<string> filepathes)
